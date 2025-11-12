@@ -1,13 +1,13 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 import Angleterre from "../assets/Angleterre.jpeg";
 import Italie from "../assets/Italie.jpeg";
 import LosAngeles from "../assets/LosAngeles.jpeg";
 import NewYork from "../assets/NewYork.jpeg";
 import Paris from "../assets/Paris.jpeg";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
-import 'swiper/css';
+import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/swiper-bundle.min.css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -52,9 +52,11 @@ const destinations = [
 ];
 
 const Destination = () => {
-  // Correction : création d'une ref et utilisation correcte de useInView
-  const ref = useRef(null);
-  const inView = useInView(ref, { threshold: 0.2, triggerOnce: true });
+  // Utilisation de useInView pour les animations
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: '-100px 0px',
+  });
 
   return (
     <section ref={ref} className="py-20 bg-gray-50" id="destinations">
