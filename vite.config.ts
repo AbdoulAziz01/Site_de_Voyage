@@ -6,7 +6,7 @@ import autoprefixer from 'autoprefixer'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? './' : '/',
+  base: '/Site_de_Voyage/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
