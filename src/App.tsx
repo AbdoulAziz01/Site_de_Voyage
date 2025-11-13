@@ -1,6 +1,9 @@
 import Destination from "./components/Destination";
+import Galerie from "./components/Galerie";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Service from "./components/Service";
+import Avis from "./components/Avis";
 
 export default function App() {
   return (
@@ -10,6 +13,9 @@ export default function App() {
         <Navbar />
         <Hero />
         <Destination/>
+        <Service/>
+        <Galerie/>
+        <Avis/>
       </div>
       {/* Barre de navigation */}
     </>

@@ -23,14 +23,10 @@ const Navbar = () => {
     };
   }, []);
 
-  // Verifier si on scrolle le background du navbar change
-
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300
-      // si on scrolle le background du navbar change
-      ${isScrolled ? "bg-white shadow" : "bg-transparent"}
-    `}
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow" : "bg-transparent"}`}
+      aria-label="Navigation principale"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between p-4 h-20" id="accueil">
@@ -50,21 +46,21 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {[
-                "Accueil",
-                "Destinations",
-                "Services",
-                "À propos",
-                "Contact",
-                // .map pour itérer sur chaque item de la liste
+                { name: "Accueil", id: "accueil" },
+                { name: "Destinations", id: "destinations" },
+                { name: "Services", id: "services" },
+                { name: "À propos", id: "a-propos" },
+                { name: "Contact", id: "contact" }
               ].map((item) => (
                 <motion.a
                   // key pour identifier chaque élément de la liste avec un identifiant unique href pour le lien vers la section correspondante
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                  key={item.id}
+                  href={`#${item.id}`}
+                  className="text-gray-600 hover:text-blue-600 transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium"
                   whileHover={{ scale: 1.05, color: "#2563eb" }}
+                  aria-current={item.id === 'accueil' ? 'page' : undefined}
                 >
-                  {item}
+                  {item.name}
                 </motion.a>
               ))}
             </div>
@@ -92,18 +88,19 @@ const Navbar = () => {
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
               {[
-                "Accueil",
-                "Destinations",
-                "Services",
-                "À propos",
-                "Contact",
+                { name: "Accueil", id: "accueil" },
+                { name: "Destinations", id: "destinations" },
+                { name: "Services", id: "services" },
+                { name: "À propos", id: "a-propos" },
+                { name: "Contact", id: "contact" }
               ].map((item) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="block text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                  key={item.id}
+                  href={`#${item.id}`}
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-gray-100 transition-colors duration-300"
+                  onClick={() => setIsOpen(false)}
                 >
-                  {item}
+                  {item.name}
                 </a>
               ))}
             </div>
