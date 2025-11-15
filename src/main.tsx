@@ -1,10 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import App from './App';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const rootElement = document.getElementById('root');
+
+if (!rootElement) {
+  throw new Error("L'élément avec l'ID 'root' est introuvable dans le DOM");
+}
+
+const root = createRoot(rootElement);
+
+// Rendre le composant principal de l'application
+root.render(<App />);

@@ -1,9 +1,10 @@
-import Destination from "./components/Destination";
-import Galerie from "./components/Galerie";
-import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Destination from "./components/Destination";
 import Service from "./components/Service";
+import Galerie from "./components/Galerie";
 import Avis from "./components/Avis";
+import Booking from "./components/Booking";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Service/>
         <Galerie/>
         <Avis/>
+        <Booking/>
       </div>
       {/* Barre de navigation */}
     </>
