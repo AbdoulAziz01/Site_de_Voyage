@@ -1,7 +1,5 @@
 import { useInView } from "react-intersection-observer";
 import { Camera, Coffee, Compass, Hotel, Plane, Wine } from "lucide-react";
-import { title } from "process";
-import React from "react";
 import { motion } from "framer-motion";
 
 // Definition du tableau des services

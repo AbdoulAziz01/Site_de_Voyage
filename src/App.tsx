@@ -5,6 +5,7 @@ import Service from "./components/Service";
 import Galerie from "./components/Galerie";
 import Avis from "./components/Avis";
 import Booking from "./components/Booking";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Galerie/>
         <Avis/>
         <Booking/>
+        <Footer/>
       </div>
       {/* Barre de navigation */}
     </>

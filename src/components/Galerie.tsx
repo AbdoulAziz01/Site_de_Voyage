@@ -1,4 +1,3 @@
-import React from 'react';
 
 // Importation des images avec des noms de variables valides
 import img1 from '../assets/1.jpeg';
