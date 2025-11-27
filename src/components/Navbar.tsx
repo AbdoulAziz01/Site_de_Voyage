@@ -40,7 +40,7 @@ const Navbar = () => {
           >
             {/* Icone de l'aviation */}
             <Plane className="w-8 h-8 text-blue-600" />
-            <span className="ml-2 font-bold text-gray-800">Etrivox</span>
+            <span className="x">Etrivox</span>
           </motion.div>
 
           {/* Navigation desktop */}
