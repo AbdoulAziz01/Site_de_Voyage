@@ -5,7 +5,7 @@ import path from 'path';
 // Configuration Vite simplifiée
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: '/',
+  base: '/Site_de_Voyage/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,

@@ -34,9 +34,9 @@ const Navbar = () => {
           {/* Logo avec animation */}
           <motion.div
             className="flex items-center"
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -1000 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 5.5 }}
           >
             {/* Icone de l'aviation */}
             <Plane className="w-8 h-8 text-blue-600" />
